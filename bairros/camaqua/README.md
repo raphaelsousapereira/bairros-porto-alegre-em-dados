@@ -12,3 +12,5 @@ Primeira ficha, com dados obtidos em 25/11/2026.
 | Quantas praças? | **8 códigos** registrados, dos quais **3 urbanizados** e **5 gravames**. |
 
 [Dados e metodologia](../../dados/README.md) · [ObservaPOA — população por bairro](https://prefeitura.poa.br/smpg/observapoa/mapas)
+
+[Lista de praças](pracas.csv) · [Lista de logradouros](logradouros.csv)
