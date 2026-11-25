@@ -2,6 +2,12 @@
 
 Base pública do [Porto Alegre em Dados](https://portoalegreemdados.com.br/) para responder perguntas sobre os bairros com mapas, documentos e cálculos reproduzíveis.
 
+## Dados dos bairros
+
+- [Tabela comparável dos 94 bairros, com fontes e método](dados/README.md)
+- [Ficha da Cavalhada](bairros/cavalhada/README.md)
+- [Ficha do Camaquã](bairros/camaqua/README.md)
+
 ## Cavalhada
 
 Primeira coleta em **25/11/2026**. O recorte geográfico usa a camada municipal de bairros vinculada à LC 12.112/2016.
