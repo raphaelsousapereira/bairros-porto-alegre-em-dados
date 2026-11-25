@@ -25,3 +25,19 @@ python scripts/resumir-bairros.py pasta-das-fontes > dados/resumo-bairros.csv
 ```
 
 A consulta de praças retornou 1.024 registros, o mesmo número do endpoint de contagem. Um teste com deslocamento de 1.024 registros retornou uma página vazia.
+
+## Conferir uma atualização
+
+Gere o novo CSV em um arquivo temporário. Com o `pop.csv` oficial da tabela acima, compare a versão candidata com a publicada:
+
+```sh
+python scripts/conferir-bairros.py /tmp/resumo-bairros.csv \
+  --fonte-populacao pasta-das-fontes/pop.csv \
+  --anterior dados/resumo-bairros.csv
+```
+
+O comando compara a população de cada bairro com a fonte oficial e confere o total da cidade. Verifica bairros ausentes ou duplicados, faixas etárias que somam mais que a população, a soma das categorias de praça e a relação entre ruas e logradouros. Uma divergência retorna código 1.
+
+Quando a tabela passa, o relatório JSON lista faixas etárias ausentes e, se houver versão anterior, os indicadores que mudaram, com bairro, valor anterior e novo. Um valor ausente não vira zero. A alteração indica onde apurar. Sua causa depende do registro de origem e da comparação das versões das fontes.
+
+Na coleta de 25/11/2026, a conferência encontrou os 94 bairros da fonte e 1.332.845 moradores no total. A célula de 60 anos ou mais da Lomba do Pinheiro está ausente no CSV publicado e foi sinalizada.
